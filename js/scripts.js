@@ -7,18 +7,23 @@
 
 // Business Logic for Constructor aka ToDo ---------
 
+//constructor, ie. database/index
 function ToDo() {
-  
+  this.listItems = {}
 }
-
+// this method adds an entry to ToDo
+ToDo.prototype.addListItem = function(listItem) {
+  this.listItems[listItem.what] = listItem;
+};
 
 // Business Logic for Objects aka ListItems ---------
-function ListItems(what, where, when) {
+function ListItem(what, where, when) {
   this.what = what;
   this.when = when;
   this.where = where;
 }
 //step one after function:
-// let listItems = new ListItems();
+// let listItem = new ListItem();
 //step two:
-//let firstItem = new ListItems("grocery", "tomorrow", "Fred Meyer");
+//let firstItem = new ListItem("grocery", "tomorrow", "Fred Meyer");
+//let secondItem = new ListItem("post office", "2pm", "USPS downtown");

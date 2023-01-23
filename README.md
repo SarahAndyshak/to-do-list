@@ -20,21 +20,33 @@ A to do list page where people can add tasks to create a list of things to do cr
 Describe: function ToDo()
 
 * Test One
-Test: ""
+Test: "This will add an item to our To Do list."
 Code: 
-Expected Output:
+ToDo.prototype.addlistItem = function(listItem) {
+Expected Output:  ToDo {listItems: {…}}
+listItems: ...
+
+<!-- ToDo.prototype.addlistItem = function(listItem) {
+  this.listItems[listItem.what] = listItem;
+}; -->
 
 Describe: function ListItems()
 
 * Test One
 Test: "It will create a list item."
 Code: 
-function ListItems(what, where, when);
-let firstItem = new ListItems("grocery", "tomorrow", "Fred Meyer");
+function ListItem(what, where, when);
+let firstItem = new ListItem("grocery", "tomorrow", "Fred Meyer");
 Expected Output: firstItem;
 ListItems {what: 'grocery', when: 'Fred Meyer', where: 'tomorrow'}
 
-<!-->
+<!--
+function ListItem(what, where, when) {
+  this.what = what;
+  this.when = when;
+  this.where = where;
+}
+-->
 
 * Test Two
 
