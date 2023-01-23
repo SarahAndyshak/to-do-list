@@ -12,16 +12,19 @@ function ToDo() {
   this.listItems = {};
   this.currentId = 0;
 }
+
+// this method adds an entry to ToDo
+ToDo.prototype.addListItem = function(listItem) {
+  listItem.id = this.assignId(); //added this line of code after creating prototype.assignID as a separate, secondary function.
+  this.listItems[listItem.id] = listItem; //change from listItem.what to listItem.id for tracking with ID
+};
+
 //prototype to assign unique ID
 ToDo.prototype.assignID = function() {
   this.currentId += 1;
   return this.currentId;
 };
 
-// this method adds an entry to ToDo
-ToDo.prototype.addListItem = function(listItem) {
-  this.listItems[listItem.id] = listItem; //change from listItem.what to listItem.id for tracking with ID
-};
 
 // Business Logic for Objects aka ListItems ---------
 function ListItem(what, where, when) {
@@ -34,3 +37,6 @@ function ListItem(what, where, when) {
 //step two:
 //let firstItem = new ListItem("grocery", "tomorrow", "Fred Meyer");
 //let secondItem = new ListItem("post office", "2pm", "USPS downtown");
+//step three:
+//toDo.addListItem(firstItem);
+//toDo.addListItem(secondItem);

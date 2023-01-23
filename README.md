@@ -30,6 +30,31 @@ listItems: ...
   this.listItems[listItem.what] = listItem;
 }; -->
 
+* Test Two
+Test: "Write a method to create a unique ID for each item on our To Do List."
+Code: 
+ToDo.prototype.assignID = function()
+Expected Output: N/A
+
+<!-- ToDo.prototype.assignID = function() {
+  this.currentId += 1;
+  return this.currentId;
+}; -->
+
+* Test Three
+
+Test: "Allow users to remove a task from the list."
+Code: 
+
+Expected Output:
+
+<!-- * Test Four
+
+Test: "Add an option for users to indicate a task is done."
+Code: 
+
+Expected Output: -->
+
 Describe: function ListItems()
 
 * Test One
@@ -47,8 +72,6 @@ function ListItem(what, where, when) {
   this.where = where;
 }
 -->
-
-* Test Two
 
 
 ## Setup/Installation Requirements
