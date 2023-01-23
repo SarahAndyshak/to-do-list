@@ -17,14 +17,27 @@ A to do list page where people can add tasks to create a list of things to do cr
 
 ## TDD
 
-Describe: function PlacesList()
+Describe: function ToDo()
 
 * Test One
-Test: "It should return an array of numbers from 0 to 5."
+Test: ""
 Code: 
-const input = [1, 2, 3, 4, 5];
-fredBot(input);
-Expected Output: [0, 1, 2, 3, 4, 5]
+Expected Output:
+
+Describe: function ListItems()
+
+* Test One
+Test: "It will create a list item."
+Code: 
+function ListItems(what, where, when);
+let firstItem = new ListItems("grocery", "tomorrow", "Fred Meyer");
+Expected Output: firstItem;
+ListItems {what: 'grocery', when: 'Fred Meyer', where: 'tomorrow'}
+
+<!-->
+
+* Test Two
+
 
 ## Setup/Installation Requirements
 
