@@ -9,11 +9,18 @@
 
 //constructor, ie. database/index
 function ToDo() {
-  this.listItems = {}
+  this.listItems = {};
+  this.currentId = 0;
 }
+//prototype to assign unique ID
+ToDo.prototype.assignID = function() {
+  this.currentId += 1;
+  return this.currentId;
+};
+
 // this method adds an entry to ToDo
 ToDo.prototype.addListItem = function(listItem) {
-  this.listItems[listItem.what] = listItem;
+  this.listItems[listItem.id] = listItem; //change from listItem.what to listItem.id for tracking with ID
 };
 
 // Business Logic for Objects aka ListItems ---------
