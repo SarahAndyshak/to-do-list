@@ -20,11 +20,19 @@ ToDo.prototype.addListItem = function(listItem) {
 };
 
 //prototype to assign unique ID
-ToDo.prototype.assignID = function() {
+ToDo.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
 };
 
+//prototype to remove a list item
+ToDo.prototype.deleteListItem = function(id) {
+  if (this.listItems[id] === undefined) {
+    return false;
+  }
+  delete this.listItems[id];
+  return true;
+};
 
 // Business Logic for Objects aka ListItems ---------
 function ListItem(what, where, when) {
@@ -33,10 +41,15 @@ function ListItem(what, where, when) {
   this.where = where;
 }
 //step one after function:
-// let listItem = new ListItem();
+// let toDo = new ToDo();
+
 //step two:
 //let firstItem = new ListItem("grocery", "tomorrow", "Fred Meyer");
 //let secondItem = new ListItem("post office", "2pm", "USPS downtown");
-//step three:
+
+//step to add items:
 //toDo.addListItem(firstItem);
 //toDo.addListItem(secondItem);
+
+//step to delete items:
+//toDo.deleteListItem(1); -- this should delete grocery list item
